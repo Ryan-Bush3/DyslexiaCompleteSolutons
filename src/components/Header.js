@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import './Header.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBookOpen } from '@fortawesome/free-solid-svg-icons';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -12,7 +14,7 @@ const Header = () => {
     <header className="header">
       <div className="header-container">
         <div className="logo">
-          <h1>Dyslexia Complete Solutions</h1>
+          <img src="/assets/logo.png" alt="Dyslexia Complete Solutions" className="logo-img" />
         </div>
         
         <nav className={`nav ${isMenuOpen ? 'nav-open' : ''}`}>
@@ -31,9 +33,7 @@ const Header = () => {
           onClick={toggleMenu}
           aria-label="Toggle navigation menu"
         >
-          <span className={`hamburger ${isMenuOpen ? 'hamburger-open' : ''}`}></span>
-          <span className={`hamburger ${isMenuOpen ? 'hamburger-open' : ''}`}></span>
-          <span className={`hamburger ${isMenuOpen ? 'hamburger-open' : ''}`}></span>
+          <FontAwesomeIcon icon={faBookOpen} className="menu-icon" />
         </button>
       </div>
     </header>
