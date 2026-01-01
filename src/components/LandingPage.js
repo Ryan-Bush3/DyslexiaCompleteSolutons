@@ -2,17 +2,26 @@ import React from 'react';
 import './LandingPage.css';
 
 const LandingPage = () => {
+  // Function to handle the "Get Started Today" button click
+  const handleGetStarted = () => {
+    // You can add any functionality here, for example:
+    alert('Welcome! Let\'s get started with your journey.');
+  };
+
   return (
     <main className="landing-page">
       {/* Hero Section */}
+      <img src="/assets/adult-kid-reading.jpg" alt="Kids Studying" className="landing-img" />
       <section className="hero" id="home">
         <div className="hero-content">
-          <h2>Empowering Students with Dyslexia to Reach Their Full Potential</h2>
+          <div className="hero-text">
+          <h2 className="everyone-read">Where brilliant minds come to light</h2>
+          </div>
           <p className="hero-subtitle">
             Professional, evidence-based tutoring services designed specifically for students with dyslexia
           </p>
           <div className="hero-buttons">
-            <button className="cta-button primary">Get Started Today</button>
+            <button className="cta-button primary" onClick={handleGetStarted}>Get Started Today</button>
             <button className="cta-button secondary">Learn More</button>
           </div>
         </div>
@@ -92,7 +101,7 @@ const LandingPage = () => {
         <div className="container">
           <h2>Ready to Get Started?</h2>
           <p>Take the first step towards unlocking your child's potential with our expert dyslexia support.</p>
-          <button className="cta-button primary large">Schedule a Consultation</button>
+          <button className="cta-button primary large">Contact Us</button>
         </div>
       </section>
     </main>

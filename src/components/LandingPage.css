@@ -4,11 +4,10 @@
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-  color: white;
+  /* background: #20B2AA; */
+  color: #20B2AA;
   padding: 4rem 0;
   text-align: center;
-  min-height: 70vh;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,25 +53,25 @@
 }
 
 .cta-button.primary {
-  background-color: white;
-  color: #667eea;
+  background-color: #FF8C00;
+  color: white;
 }
 
 .cta-button.primary:hover {
-  background-color: #f8f9fa;
+  background-color: #2C3E50;
   transform: translateY(-2px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .cta-button.secondary {
-  background-color: transparent;
+  background-color: #20B2AA;
   color: white;
   border: 2px solid white;
 }
 
 .cta-button.secondary:hover {
-  background-color: white;
-  color: #667eea;
+  background-color: #FFD700;
+  color: #2C3E50;
   transform: translateY(-2px);
 }
 
@@ -114,7 +113,7 @@
 }
 
 .info-card h3 {
-  color: #667eea;
+  color: #FF8C00;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -133,7 +132,7 @@
 
 .info-card li:before {
   content: '✓';
-  color: #28a745;
+  color: #2ECC71;
   font-weight: bold;
   position: absolute;
   left: 0;
@@ -163,12 +162,13 @@
 }
 
 .service-card {
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-  color: white;
+  background: #FFD700;
+  color: #2C3E50;
   padding: 2rem;
   border-radius: 12px;
   text-align: center;
   transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .service-card:hover {
@@ -178,18 +178,20 @@
 .service-card h3 {
   font-size: 1.4rem;
   margin-bottom: 1rem;
-  color: white;
+  color: #2C3E50;
+  font-weight: 600;
 }
 
 .service-card p {
   line-height: 1.6;
-  opacity: 0.95;
+  color: #2C3E50;
+  opacity: 0.9;
 }
 
 /* Call to Action Section */
 .cta-section {
   padding: 5rem 0;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #2C3E50;
   color: white;
   text-align: center;
 }
@@ -207,8 +209,9 @@
 }
 
 .cta-section .cta-button.primary {
-  background-color: white;
-  color: #667eea;
+  background-color: #FF8C00;
+  color: white;
+  font-weight: 700;
 }
 
 /* Mobile Responsiveness */
@@ -242,11 +245,11 @@
     grid-template-columns: 1fr;
   }
   
-  .hero-content,
+  /* .hero-content,
   .info-card,
   .service-card {
     padding: 1.5rem;
-  }
+  } */
 }
 
 @media (max-width: 480px) {
@@ -263,4 +266,18 @@
   .cta-section {
     padding: 3rem 0;
   }
+}
+
+.everyone-read {
+  font-size: 27px;
+  font-family: Bradley Hand, cursive;
+}
+
+.hero-title {
+  font-family: Bradley Hand, cursive;
+}
+
+.landing-img {
+  height: 226px;
+  margin-top: 30px;
 }
