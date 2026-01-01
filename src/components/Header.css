@@ -1,0 +1,151 @@
+.header {
+  background: #ffffff;
+  color: #2C3E50;
+  padding: 5px 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo h1 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin: 0;
+  color: white;
+  font-family: Comic Sans MS, Comic Sans, cursive;
+}
+
+.logo-img {
+  height: 60px;
+  width: auto;
+}
+
+.nav {
+  display: flex;
+}
+
+.nav-list {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  gap: 2rem;
+}
+
+.nav-list li a {
+  color: #2C3E50;
+  text-decoration: none;
+  font-weight: 500;
+  padding: 0.5rem 0;
+  transition: color 0.3s ease;
+  border-bottom: 2px solid transparent;
+}
+
+.nav-list li a:hover,
+.nav-list li a:focus {
+  color: #FF8C00;
+  border-bottom-color: #FF8C00;
+}
+
+.menu-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.5rem;
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+.menu-icon {
+  font-size: 1.5rem;
+  color: #2C3E50;
+  transition: color 0.3s ease;
+}
+
+.menu-toggle:hover .menu-icon {
+  color: #FF8C00;
+}
+
+.hamburger {
+  width: 25px;
+  height: 3px;
+  background-color: #2C3E50;
+  margin: 3px 0;
+  transition: 0.3s;
+  transform-origin: center;
+}
+
+.hamburger-open:nth-child(1) {
+  transform: rotate(45deg) translate(6px, 6px);
+}
+
+.hamburger-open:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger-open:nth-child(3) {
+  transform: rotate(-45deg) translate(7px, -6px);
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .logo h1 {
+    font-size: 1.4rem;
+  }
+
+  .menu-toggle {
+    display: flex;
+  }
+
+  .nav {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-in-out;
+  }
+
+  .nav-open {
+    max-height: 300px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    padding: 1rem 0;
+  }
+
+  .nav-list li {
+    text-align: center;
+  }
+
+  .nav-list li a {
+    display: block;
+    padding: 1rem 2rem;
+    border-bottom: 1px solid rgba(44, 62, 80, 0.1);
+  }
+
+  .nav-list li:last-child a {
+    border-bottom: none;
+  }
+}
