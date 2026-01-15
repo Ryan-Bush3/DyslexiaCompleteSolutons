@@ -10,7 +10,7 @@ export default function ContactUs() {
     event.preventDefault();
     setResult("Sending....");
     const formData = new FormData(event.currentTarget);
-    formData.append("access_key", "400a98e0-593a-49f9-a16c-32390ae49ce8");
+    formData.append("access_key", "bf57825c-c081-497c-ac7e-e2e64792a069");
 
     const response = await fetch("https://api.web3forms.com/submit", {
       method: "POST",
@@ -20,14 +20,13 @@ export default function ContactUs() {
     const data = await response.json();
     if (data.success) {
       setResult("Form Submitted Successfully");
-      event.currentTarget.reset();
       setReason("");
     } else {
       setResult("Error");
     }
   };
 
-  const remainingChars = 500 - reason.length;
+  const remainingChars = 350 - reason.length;
 
   return (
     <div className="contact-us-page">
@@ -94,7 +93,7 @@ export default function ContactUs() {
                 name="reason"
                 value={reason}
                 onChange={(e) => {
-                  if (e.target.value.length <= 500) {
+                  if (e.target.value.length <= 350) {
                     setReason(e.target.value);
                   }
                 }}
