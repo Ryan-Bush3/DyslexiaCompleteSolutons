@@ -125,8 +125,9 @@
   }
 
   .nav-open {
-    max-height: 300px;
+    max-height: 500px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+    display: block;
   }
 
   .nav-list {
